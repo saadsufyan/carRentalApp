@@ -1,0 +1,84 @@
+page-bookingdetails {
+
+}
+.table {
+    text-align: start;
+}
+.table-booking-details {
+    font-size: 1em;
+    margin-top: 10px;
+}
+.text-start {
+    text-align: start;
+}
+
+.table-booking-details tr td:nth-child(1) {
+    background: url(../assets/imgs/arrow.png);
+    background-size: 7px;
+    background-repeat: no-repeat;
+    background-position: right 0px center;
+}
+
+.table-booking-details tr td:nth-child(2) {
+    color: #3460ab;
+    font-weight: 500;
+    width: 150px;
+}
+
+.table-booking-details tr td {
+    padding: 4px 10px;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.add-plus {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.btn-upload-image {
+    border: 1px solid gray;
+    color: #fff;
+    background-color: #686868 !important;
+    padding: 8px 20px;
+    border-radius: 2px;
+    font-size: 20px;
+    height: 80px !important;
+    text-align: center;
+    width: 80px !important;
+    font-weight: bold;
+    box-shadow: 0px 0px 14px black;
+    border: solid 4px #fff;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.heading-title:before {
+    content: '';
+    border: solid 1px;
+    height: 1px;
+    width: 20%;
+    display: -webkit-box;
+    margin: 6px 0 -10px 0;
+}
+
+.heading-title:after {
+    content: '';
+    border: solid 1px;
+    height: 1px;
+    float: right;
+    width: 20%;
+    display: -webkit-box;
+    margin: 6px 0 -10px 0;
+}

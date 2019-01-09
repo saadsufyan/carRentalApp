@@ -1,0 +1,135 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle start>
+        <ion-icon name="menu" style="color: black"></ion-icon> 
+    </button>  
+    <ion-buttons class="person-icon-align">
+        <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-title>Chat</ion-title>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="outer-box">
+
+    <div class="col-xs-12 message-box">
+      
+      <div class="msg-send">
+        Lorem Ipsum is simply dummy text 
+      </div>
+  
+      <div class="msg-recieve">
+        Lorem Ipsum is simply dummy 
+      </div>
+      <div class="msg-recieve">
+        Lorem Ipsum is simply dummy text of.
+      </div>
+  
+      <div class="msg-send">
+        Lorem Ipsum is simply dummy text of the.
+      </div>
+  
+      <div class="msg-recieve">
+        Lorem Ipsum is simply dummy.
+      </div>
+  
+    </div>
+  
+  </div>
+
+
+  <div class="col-xs-12 btn-box fixed1" style="text-align: center;">
+    <input type="" name="" class="type-box ltr" placeholder="Type a message here..." [(ngModel)]="send" name="send">
+    <button class="btn btn-send ltr" style="float: right;">
+      <img src="assets/imgs/chat_1.png" class="btn-chat-icon">
+    </button>
+    <button class="btn btn-send ltr" style="float: right;">
+      <img src="assets/imgs/chat_2.png" class="btn-chat-icon">
+    </button>
+    <button class="btn btn-send ltr" style="float: right;">
+      <img src="assets/imgs/chat_3.png" class="btn-chat-icon">
+    </button>
+  </div>
+
+  <!-- <div class="col-xs-12">
+    <div class="col-xs-6 btn-box fixed1" style="text-align: center;">
+      <input type="" name="" class="type-box ltr" placeholder="Type a message here..." [(ngModel)]="send" name="send">
+    </div>
+    <div class="col-xs-6 chat-buttons" style="float: right;">
+      <button class="btn btn-send ltr" style="float: right;">
+        <img src="assets/imgs/chat_1.png" class="btn-chat-icon">
+      </button>
+        <button class="btn btn-send ltr" style="float: right;">
+        <img src="assets/imgs/chat_2.png" class="btn-chat-icon">
+      </button>
+      <button class="btn btn-send ltr" style="float: right;">
+        <img src="assets/imgs/chat_3.png" class="btn-chat-icon">
+      </button>
+    </div>
+  </div> -->
+
+
+</ion-content>
+
+
+
+<!-- <ion-footer>
+  <ion-toolbar>
+		<div class="col-xs-12 btn-box fixed1" style="text-align: center;">
+			<input type="" name="" class="type-box ltr" placeholder="Type a message here..." [(ngModel)]="send" name="send">
+      <button class="btn btn-send ltr">
+        <img src="assets/imgs/chat_1.png" class="btn-chat-icon">
+        </button>
+        <button class="btn btn-send ltr">
+        <img src="assets/imgs/chat_2.png" class="btn-chat-icon">
+        </button>
+        <button class="btn btn-send ltr">
+        <img src="assets/imgs/chat_3.png" class="btn-chat-icon">
+        </button>
+		</div>
+  </ion-toolbar>
+</ion-footer> -->
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="col-xs-12 bottom-menu-box no-p">
+      <div class="menu-box" (click)="goToHome()">
+        <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+        <h6 class="menu-text">Home</h6>
+      </div>	
+      <div class="menu-box" (click)="goTomyBookings()">
+        <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+        <h6 class="menu-text">My Bookings</h6>
+      </div>	
+      <div class="menu-box" (click)="goToChat()">
+        <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+        <h6 class="menu-text">Chat</h6>
+      </div>	
+      <div class="menu-box" (click)="goToNotifications()">
+        <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+        <h6 class="menu-text">Notifications</h6>
+      </div>	
+      <div class="menu-box" (click)="goToListYourCar()">
+        <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+        <h6 class="menu-text">List your car</h6>
+      </div>	
+    </div>
+  </ion-toolbar>
+</ion-footer>
+  

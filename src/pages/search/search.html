@@ -1,0 +1,145 @@
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle start>
+          <ion-icon name="menu" style="color: black"></ion-icon> 
+      </button>  
+      <ion-buttons class="person-icon-align">
+          <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-title>Search</ion-title>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right>
+          <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right>
+          <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content>
+<!-- container -->
+<div class="container profile-header" style="min-height: 60px;">
+
+  </div>
+  <!-- container -->
+  
+  <!-- signup form -->
+  <div class="bg-gray">
+    <div class="col-xs-12" style="padding-bottom: 30px;">
+      <div class="col-xs-12 form-inner" style="padding: 4px !important;">
+          <form>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="text-box form-control icon-search ltr" style="padding: 0px 4px 0px 40px !important;" placeholder="Search" required="">
+              </div>
+            </div>
+            <div class="form-group text-right ltr">
+              <div class="col-xs-12">
+                <h5>Filters <img src="assets/imgs/filter.png"></h5>
+              </div>
+            </div>	      	
+            <div class="form-group">
+              <div class="col-xs-6">
+                <select class="text-box new ltr">
+                  <option>Country</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-6 no-pl">
+                <select class="text-box new ltr">
+                  <option>City</option>
+                </select>
+              </div>
+            </div>	
+            <div class="form-group">
+              <div class="col-xs-6">
+                  <ion-datetime class="text-box new2 form-control ltr" placeholder="12/6/18" name="startdate" displayFormat="MM/DD/YYYY" [(ngModel)]="startDate"></ion-datetime>
+                <!-- <input type="text" class="text-box new form-control ltr" placeholder="Date from" required=""> -->
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-6 no-pl">
+                  <ion-datetime class="text-box new2 form-control ltr" placeholder="22/6/18" name="endtdate" displayFormat="MM/DD/YYYY" [(ngModel)]="endDate"></ion-datetime>
+                <!-- <input type="text" class="text-box new form-control ltr" placeholder="Date to" required=""> -->
+              </div>
+            </div>	
+            <div class="form-group">
+              <div class="col-xs-12">
+                <select class="text-box new ltr">
+                  <option>Make</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <select class="text-box new ltr">
+                  <option>Model</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <select class="text-box new ltr">
+                  <option>Year</option>
+                </select>
+              </div>
+            </div>
+           
+            <div class="form-group">
+              <div class="col-xs-12"> 
+                <div class="range-box">
+                  <h5>Price Range</h5>
+                  <ion-range dualKnobs="true" pin="true" name="pricerange" [(ngModel)]="rangeValue" min="1" max="100" color="danger" pin="true">
+                    <ion-label range-left>1</ion-label>
+                    <ion-label range-right>100</ion-label>
+                  </ion-range>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12" style="text-align: center;padding-top:30px;padding-bottom:20px;">
+                <button class="btn btn-filled lg" (click)="goToSearchResults()">Search</button>		          	
+              </div>
+              </div>
+          </form>
+        </div>		
+      </div>
+  </div>  
+  <!-- signup form -->
+</ion-content>
+
+
+<ion-footer>
+    <ion-toolbar>
+    <div class="col-xs-12 bottom-menu-box no-p">
+      <div class="menu-box" (click)="goToHome()">
+        <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+        <h6 class="menu-text">Home</h6>
+      </div>	
+      <div class="menu-box" (click)="goTomyBookings()">
+        <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+        <h6 class="menu-text">My Bookings</h6>
+      </div>	
+      <div class="menu-box" (click)="goToChat()">
+        <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+        <h6 class="menu-text">Chat</h6>
+      </div>	
+      <div class="menu-box" (click)="goToNotifications()">
+        <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+        <h6 class="menu-text">Notifications</h6>
+      </div>	
+      <div class="menu-box" (click)="goToListYourCar()">
+        <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+        <h6 class="menu-text">List your car</h6>
+      </div>	
+    </div>
+    </ion-toolbar>
+  </ion-footer>
+  

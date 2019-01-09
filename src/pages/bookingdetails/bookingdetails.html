@@ -1,0 +1,230 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle start>
+        <ion-icon name="menu" style="color: black"></ion-icon> 
+    </button>  
+    <ion-buttons class="person-icon-align">
+        <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-title>Booking Details</ion-title>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content>
+
+<!-- container -->
+<div class="container profile-header" style="padding: 0 !important;min-height: 80px ;">
+	
+</div>
+<!-- container -->
+
+<!-- signup form -->
+<div class="bg-gray" style="padding-bottom: 30px;">
+	<div class="col-xs-12">
+    <div class="col-xs-12 form-inner" style="padding-left: 0 !important;padding-right: 0 !important;">
+			
+			<div class="col-xs-12 text-start" style="padding: 0;">
+				<h4 class="heading-title short">BOOKING DETAILS</h4>
+				<table class="table-booking-details ltr">
+					<tr>
+						<td></td>
+						<td>Country:</td>
+						<td>United Arab Emirates</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>City:</td>
+						<td>Sharjah</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Date:</td>
+						<td>19-Apr-2018 to 30-May-2018</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Total Amount of Money:</td>
+						<td>12 AED</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Payment Method:</td>
+						<td>Cash</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Driver:</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Delivery:</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Deposit:</td>
+						<td>1000 AED</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Message from user:</td>
+						<td>No Message</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Email:</td>
+						<td>david.john@gmail.com</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Phone Number:</td>
+						<td>+6486464864</td>
+					</tr>
+				</table>
+      </div>
+      
+      <div class="col-xs-12 text-start" style="padding: 0;">
+				<h4 class="heading-title short">CAR DETAILS</h4>
+				<table class="table-booking-details ltr">
+					<tr>
+						<td></td>
+						<td>Title:</td>
+						<td>Hyundai Accent</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Make:</td>
+						<td>Hyundai</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Model:</td>
+						<td>Cruze</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Engine Type:</td>
+						<td>Gas/Diesel</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Color:</td>
+						<td>Blue</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Year:</td>
+						<td>2016</td>
+					</tr>					
+				</table>
+      </div>
+      
+      <div class="col-xs-12 text-start" style="padding: 0;">
+				<h4 class="heading-title short">OWNER DETAILS</h4>
+				<table class="table-booking-details ltr">
+					<tr>
+						<td></td>
+						<td>Name:</td>
+						<td>John Wick</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Email Address:</td>
+						<td>john.wick@gmail.com</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Phone Number:</td>
+						<td>+658974845</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Location:</td>
+						<td>Al Arouba Street - Sharjah.</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Color:</td>
+						<td>Blue</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Year:</td>
+						<td>2016</td>
+					</tr>					
+				</table>
+      </div>
+      
+      <div class="col-xs-12 text-center" style="padding: 0;" *ngIf="filter">
+				<h4 class="heading-title short" style="font-size: 15px;">CAR CONDITION PHOTOS</h4>
+				<div class="upload-btn-wrapper">
+				  <button class="btn-upload-image">
+				  <span class="add-plus">+</span>
+          <input type="file" name="myfile" />
+          </button>
+				</div>
+      </div>
+      
+      <div class="col-xs-12 text-center" style="padding: 0;" *ngIf="filter">
+				<h4 class="heading-title short" style="font-size: 14px;">IDENTITY / LICENSE PHOTOS</h4>
+				<div class="upload-btn-wrapper">
+				  <button class="btn-upload-image">
+				  <span class="add-plus">+</span>
+          <input type="file" name="myfile" />
+          </button>
+				</div>
+		</div>
+
+
+			<div class="col-xs-12" style="text-align: center; padding-bottom: 30px;">
+        <br><br>
+        <button class="btn btn-filled lg" (click)="goTomyBookings()">Proceed</button> 
+	    </div>
+
+	    </div>	
+  </div>
+</div>  
+<!-- signup form -->
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+  <div class="col-xs-12 bottom-menu-box no-p">
+    <div class="menu-box" (click)="goToHome()">
+      <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+      <h6 class="menu-text">Home</h6>
+    </div>	
+    <div class="menu-box active" (click)="goTomyBookings()">
+      <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+      <h6 class="menu-text">My Bookings</h6>
+    </div>	
+    <div class="menu-box" (click)="goToChat()">
+      <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+      <h6 class="menu-text">Chat</h6>
+    </div>	
+    <div class="menu-box" (click)="goToNotifications()">
+      <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+      <h6 class="menu-text">Notifications</h6>
+    </div>	
+    <div class="menu-box" (click)="goToListYourCar()">
+      <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+      <h6 class="menu-text">List your car</h6>
+    </div>	
+  </div>
+  </ion-toolbar>
+</ion-footer>

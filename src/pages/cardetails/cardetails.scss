@@ -1,0 +1,35 @@
+page-cardetails {
+
+}
+.icon-details {
+    width: 20px;
+}
+.table-box:nth-child(1) {
+    border-right: solid 1px #c5c7c9;
+}
+.table-details tr td:nth-child(1) {
+    width: 30px;
+}
+
+.feature-box {
+    border-top: solid 1px #c5c7c9;
+    padding: 14px 20px 0 !important;
+}
+.list {
+    padding: 0;
+}
+
+.list li:nth-child(1) {
+    margin-left: 0;
+}
+.list.vertical li {
+    float: none;
+    display: block;
+    padding-left: 20px;
+    margin: 6px 0;
+    background: url(../assets/imgs/arrow_blue.png);
+    background-repeat: no-repeat;
+    background-size: 6px;
+    background-position: 4px 4px;
+    font-weight: 500;
+}

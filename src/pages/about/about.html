@@ -1,0 +1,79 @@
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle start>
+          <ion-icon name="menu" style="color: black"></ion-icon> 
+      </button>  
+      <ion-buttons class="person-icon-align">
+          <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-title>About</ion-title>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right>
+          <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right>
+          <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content>
+<!-- container -->
+<div class="container profile-header" style="padding: 0 !important;min-height: 80px ;">
+	
+  </div>
+  <!-- container -->
+  
+  <!-- signup form -->
+  <div class="bg-gray" style="padding-bottom: 30px;">
+    <div class="col-xs-12">
+      <div class="col-xs-12 form-inner" style="min-height: 100vh;display: table;">
+        
+        <div class="col-xs-12 text-center" style="padding: 0;">
+          <h4 class="heading-title">ABOUT US</h4>
+          <h5 class="text-md">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </h5>
+          <h5 class="text-md">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </h5>
+        </div>
+        </div>		
+      </div>
+  </div>  
+  <!-- signup form -->
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="col-xs-12 bottom-menu-box no-p">
+      <div class="menu-box" (click)="goToHome()">
+        <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+        <h6 class="menu-text">Home</h6>
+      </div>	
+      <div class="menu-box" (click)="goTomyBookings()">
+        <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+        <h6 class="menu-text">My Bookings</h6>
+      </div>	
+      <div class="menu-box" (click)="goToChat()">
+        <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+        <h6 class="menu-text">Chat</h6>
+      </div>	
+      <div class="menu-box" (click)="goToNotifications()">
+        <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+        <h6 class="menu-text">Notifications</h6>
+      </div>	
+      <div class="menu-box" (click)="goToListYourCar()">
+        <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+        <h6 class="menu-text"> List your car</h6>
+      </div>	
+    </div>
+  </ion-toolbar>
+</ion-footer>
+  

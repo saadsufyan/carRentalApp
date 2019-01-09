@@ -1,0 +1,47 @@
+page-notifications {
+
+}
+.box-outer {
+    padding: 7px 7px 0 !important;
+}
+
+.notification-box {
+    background: #fff;
+    padding: 20px 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 16px 28px;
+    width: 100% !important;
+    min-height: 94px;
+    display: table;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 8px #222;
+}
+
+.notification-dp {
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid 2px #fff;
+    height: 70px;
+    width: 70px !important;
+    float: left;
+    margin: -10px 0px;
+    box-shadow: 0px 2px 8px #222;
+}
+
+.img-booking {
+    width: 100%;
+    height: 100%;
+}
+
+.no-m {
+    margin: 0 !important;
+}
+
+.notification-right {
+    padding-left: 20px !important;
+}
+.no-pl {
+    padding-left: 0 !important;
+}

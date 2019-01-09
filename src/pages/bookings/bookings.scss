@@ -1,0 +1,59 @@
+page-bookings {
+
+}
+
+
+.calendar-box {
+    min-height: 270px !important;
+    display: table;
+}
+
+#calendar-container {
+    padding: 12px 0px 0 16px;
+    width: 100%;
+    height: 240px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial;
+}
+
+#calendar-container>div {
+    padding: 0;
+    margin-bottom: 10px;
+}
+.heading-light {
+    font-weight: 300 !important;
+}
+#calendar-container>div {
+    padding: 0;
+    margin-bottom: 10px;
+}
+.c-darkblue {
+    color: #365fac !important;
+}
+.text-box.new {
+    padding: 0px 4px 0 12px !important;
+    border: solid 1px #bbbcbe !important;
+    color: #868687 !important;
+    background: none !important;
+}
+
+.ngx-datepicker-container[_ngcontent-c1] .ngx-datepicker-calendar-container[_ngcontent-c1] {
+    position: initial !important;
+    width: 320px;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.08);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.08);
+    border: 1px solid #dfe3e9;
+    border-radius: 4px;
+}
+.text-box.lg {
+    padding: 0 !important;
+    width: 100%;
+    resize: none;
+    height: 80px !important;
+    color: #59595b !important;
+    font-weight: 300;
+}

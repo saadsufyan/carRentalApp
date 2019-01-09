@@ -1,0 +1,76 @@
+<ion-menu [content]="content" side="left" [content]="content" persistent="true">
+  <ion-header>
+    <!-- <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar> -->
+  </ion-header>
+
+  <!-- <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content> -->
+
+  <ion-content class="custom no-scroll">
+
+      <div class="sidemenu-header" style="padding: 20% 0 0 0 !important;">
+          <img src="assets/imgs/logo.png" class="img-logo-menu">
+      </div>
+
+      <div class="col-xs-12 text-center">
+          <img class="sidemenu-user-profile" src="assets/imgs/profile.png">
+          <div>
+            <h3 class="c-darkblue">
+              David Johnson
+            </h3>
+            <rating [(ngModel)]="rate1" 
+            readOnly="false"
+            max="5" 
+            emptyStarIconName="star-outline" 
+            halfStarIconName="star-half"
+            starIconName="star" 
+            nullable="false"> 
+            </rating>
+          </div>
+      </div>
+      
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+
+        <div class="col-xs-4 no-padd">
+            <img src="{{p.icon}}" class="img-icon-menu">
+        </div>
+        <div class="col-xs-8 no-padd1 color-gray text-left">
+            {{p.title}}
+        </div>
+        
+      </button>
+      <br>
+      <div class="col-xs-3">
+        <img src="assets/imgs/icon3.png" class="img-icon-menu" style="margin: 0px 0px -3px 30px;">
+      </div>
+      <div class="col-xs-6 no-padd1 color-gray text-left" style="font-size: 17px;margin: 0px 0px 0px 20px;">
+        Language  
+      </div>
+      <div class="col-xs-3" style="float: right;margin: -30px 10px 0 0;">
+        <ion-toggle [(ngModel)]="language"></ion-toggle>
+      </div>
+
+      <div class="text-center" style="padding: 10%;margin: 30px 0 0 0;">
+        <button class="menu-buttons">
+          Upload Driving License
+        </button>
+        <br><br>
+        <button class="menu-buttons" menuClose (click)="goToAgencySignup()">
+            Rental Agency Signup
+        </button>
+      </div>
+  
+  </ion-content>
+
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

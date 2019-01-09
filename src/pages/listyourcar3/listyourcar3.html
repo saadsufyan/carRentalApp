@@ -1,0 +1,155 @@
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle start>
+          <ion-icon name="menu" style="color: black"></ion-icon> 
+      </button>  
+      <ion-buttons class="person-icon-align">
+          <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-title>List Your Car</ion-title>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right> 
+          <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right>
+          <button ion-button icon-only  (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+    </ion-navbar>
+  
+  </ion-header>
+
+<ion-content>
+<!-- container -->
+<div class="container profile-header" style="min-height: 60px;">
+
+  </div>
+  <!-- container -->
+  
+  <!-- signup form -->
+  <div class="bg-gray">
+    <div class="col-xs-12" style="padding-bottom: 30px;">
+      <div class="col-xs-12 form-inner" style="padding: 4px !important;min-height: 100vh;display: table;">
+          <form>
+            <div class="form-group">
+              <div class="col-xs-12 lable-box ltr">
+              <h4>Car Features:</h4>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="range-box" style="padding: 0 !important;margin-bottom: 10px;">
+                  <div class="icon-box" (click)="onSelectBluetooth()">
+                    <h6><b>Bluetooth</b></h6>
+                    <img [src]="selectBluetooth ? 'assets/imgs/feature_icon5.png' : 'assets/imgs/feature_icon5_active.png'" class="icon-feature">
+                  </div>
+                  <div class="icon-box" (click)="onSelectChildSeat()">
+                    <h6><b>Child Seat</b></h6>
+                    <img [src]="selectChildSeat ? 'assets/imgs/feature_icon1.png' : 'assets/imgs/feature_icon1_active.png'" class="icon-feature">
+                  </div>
+                  <div class="icon-box" (click)="onSelectGps()">
+                    <h6><b>GPS</b></h6>
+                    <img [src]="selectGps ? 'assets/imgs/feature_icon2.png' : 'assets/imgs/feature_icon2_active.png'" class="icon-feature">
+                  </div>
+                  <div class="icon-box" (click)="onSelectWheel()">
+                    <h6><b>4 Wheel</b></h6>
+                    <img [src]="selectWheel ? 'assets/imgs/feature_icon3.png' : 'assets/imgs/feature_icon3_active.png'" class="icon-feature">
+                  </div>
+                  <div class="icon-box" (click)="onSelectAC()">
+                    <h6><b>A/C</b></h6>
+                    <img [src]="selectAC ? 'assets/imgs/feature_icon4.png' : 'assets/imgs/feature_icon4_active.png'" class="icon-feature">
+                  </div>
+                </div>
+              </div>
+            </div>	      	
+            <div class="form-group">
+              <div class="col-xs-6">
+                <select class="text-box new2 ltr">
+                  <option>Delivery Onsite</option>
+                </select>
+              </div>
+            </div>		      
+            <div class="form-group">
+              <div class="col-xs-6 no-pl">
+                <select class="text-box new2 ltr">
+                  <option>With a Driver</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <!-- <select class="text-box new2 ltr">
+                  <option>Rental Deposit</option>
+                </select> -->
+                <input type="text" class="text-box form-control text-icon-align ltr" placeholder="Rental Deposit" required="" name="rentaldiposit" [(ngModel)]="rentaldiposit">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <select class="text-box new2 ltr">
+                  <option>Payment Method</option>
+                </select>
+              </div>
+            </div>		      
+            <div class="form-group">
+              <div class="col-xs-12">
+                <select class="text-box new2 ltr">
+                  <option>Economy</option>
+                </select>
+              </div>
+            </div>		      
+            <div class="form-group">
+              <div class="col-xs-12 lable-box ltr">
+                <h4>Add Image</h4>
+                <div class="upload-btn-wrapper">
+              <button class="btn-upload-image">
+              <span class="add-plus">+</span>
+              <input type="file" name="myfile" />
+              </button>
+            </div>
+              </div>
+            </div>	      		      	      		      
+            <div class="form-group">
+              <div class="col-xs-12 text-center" style="position: absolute;bottom: 10%;">
+                <button class="btn btn-filled lg">List your car</button>		          	
+              </div>
+              </div>
+          </form>
+        </div>		
+      </div>
+  </div>  
+  <!-- signup form -->
+</ion-content>
+
+
+
+<ion-footer>
+    <ion-toolbar>
+    <div class="col-xs-12 bottom-menu-box no-p">
+      <div class="menu-box" (click)="goToHome()">
+        <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+        <h6 class="menu-text">Home</h6>
+      </div>	
+      <div class="menu-box" (click)="goTomyBookings()">
+        <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+        <h6 class="menu-text">My Bookings</h6>
+      </div>	
+      <div class="menu-box" (click)="goToChat()">
+        <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+        <h6 class="menu-text">Chat</h6>
+      </div>	
+      <div class="menu-box" (click)="goToNotifications()">
+        <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+        <h6 class="menu-text">Notifications</h6>
+      </div>	
+      <div class="menu-box active" (click)="goToListYourCar()">
+        <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+        <h6 class="menu-text">List your car</h6>
+      </div>	
+    </div>
+    </ion-toolbar>
+    
+   
+  </ion-footer>

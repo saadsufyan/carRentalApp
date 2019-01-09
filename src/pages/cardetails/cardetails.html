@@ -1,0 +1,222 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle start>
+        <ion-icon name="menu" style="color: black"></ion-icon> 
+    </button>  
+    <ion-buttons class="person-icon-align">
+        <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-title>Car Details</ion-title>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+<!-- container -->
+<div class="container profile-header">
+	<div class="col-xs-12 no-p">
+		<div class="strip-box ltr blue">
+			<h5 class="c-white">Rental Agency</h5>
+		</div>
+	</div>
+	<div class="col-xs-3 no-p one-box ltr" style="margin-top: -40px;">
+		<div class="title-box">
+			<div class="vendor-dp-box">
+				<img src="assets/imgs/agency_logo.png">
+			</div>
+			<h5>Agency Name</h5>
+		</div>
+	</div>
+	<div class="col-xs-6 two-box ltr">
+		<img src="assets/imgs/car_lg.png" class="img-car">
+	</div>
+	<div class="col-xs-3 three-box ltr">
+		<br>
+		<div class="price-box">
+			<h5 class="c-white">AED<br>70</h5>
+		</div>
+	</div>
+	<div class="col-xs-12 no-p">
+		<div class="col-xs-8 no-p name-box ltr">
+			<h4> <b>Hyundai Accent</b></h4>
+			<div class="rating-star-box ltr" style="margin: 6px 0 0 0">
+        <rating [(ngModel)]="rate" 
+        readOnly="false"
+        max="5" 
+        emptyStarIconName="star-outline" 
+        halfStarIconName="star-half"
+        starIconName="star" 
+        nullable="false"> 
+        </rating>
+			</div>
+			<div class="rating-star-title ltr">
+			<h5 class="no-m">15 Reviews  <img src="assets/imgs/arrow.png" class="img-arrow ltr"> </h5>					
+			</div>
+		</div>
+		<div class="col-xs-4 no-p detail-box ltr" style="padding-right: 10px !important;padding-top: 0 !important;">
+		<h5>868 Km Away</h5>				
+		</div>
+		<div class="col-xs-12 no-p available-date-box ltr">
+			<h5><strong>Available Dates:</strong> 20-Mar-2018 - 30-May-2018</h5>
+		</div>
+	</div>
+</div>
+<!-- container -->
+
+<!-- signup form -->
+<div class="bg-gray" style="padding-bottom: 30px;">
+	<div class="col-xs-12">
+		<div class="col-xs-12 form-inner" style="padding: 20px 0px;">
+			<div class="col-xs-6 table-box ltr">
+			   <table class="table-details ltr">
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_1.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> Make </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>Hundai</td>
+			   	</tr>
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_2.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> Engine Type </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>Gas/Diesel</td>
+			   	</tr>
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_3.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> Transmission </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>Manual</td>
+			   	</tr>
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_4.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> Rental Deposit </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>AED 0</td>
+			   	</tr>
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_5.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> With a Driver </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>No</td>
+			   	</tr>
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_4.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> Rent Per Day </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>AED 70</td>
+			   	</tr>
+			   </table>
+			</div>
+			<div class="col-xs-6 table-box ltr">
+			   <table class="table-details ltr">
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_6.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> Model </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>Accent</td>
+			   	</tr>
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_7.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> Color </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>White</td>
+			   	</tr>
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_8.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> year </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>2018</td>
+			   	</tr>
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_9.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> Delivery Onsite </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>Yes</td>
+			   	</tr>
+			   	<tr>
+			   		<td><img src="assets/imgs/icon_4.png" class="icon-details"></td>
+			   		<td> <span class="c-darkblue"><b> Payment Method </b> </span></td>
+			   	</tr>
+			   	<tr>
+			   		<td></td>
+			   		<td>Credit Card</td>
+			   	</tr>
+			   </table>
+			</div>
+			<div class="col-xs-12 feature-box ltr">
+				<h4 class="c-darkblue">Car Feature</h4>
+				<ul class="list vertical ltr">
+					<li>A/C</li>
+					<li>USB Input</li>
+					<li>Aux Input</li>
+				</ul>
+			</div>
+	      	<div class="col-xs-12" style="text-align: center; padding-top: 30px;" *ngIf="hideBookButton">
+	        	<button class="btn btn-filled lg" (click)="goToBookings()">Book This Car</button> 
+	        </div>
+
+	    </div>		
+    </div>
+</div>  
+<!-- signup form -->
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+  <div class="col-xs-12 bottom-menu-box no-p">
+    <div class="menu-box active" (click)="goToHome()">
+      <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+      <h6 class="menu-text">Home</h6>
+    </div>	
+    <div class="menu-box" (click)="goTomyBookings()">
+      <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+      <h6 class="menu-text">My Bookings</h6>
+    </div>	
+    <div class="menu-box" (click)="goToChat()">
+      <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+      <h6 class="menu-text">Chat</h6>
+    </div>	
+    <div class="menu-box" (click)="goToNotifications()">
+      <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+      <h6 class="menu-text">Notifications</h6>
+    </div>	
+    <div class="menu-box" (click)="goToListYourCar()">
+      <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+      <h6 class="menu-text">List your car</h6>
+    </div>	
+  </div>
+  </ion-toolbar>
+</ion-footer>

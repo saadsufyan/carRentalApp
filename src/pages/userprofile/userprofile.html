@@ -1,0 +1,196 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle start>
+        <ion-icon name="menu" style="color: black"></ion-icon> 
+    </button>  
+    <ion-buttons class="person-icon-align">
+        <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-title>User Profile</ion-title>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only  (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+<!-- container -->
+<div class="container profile-header">
+	<div class="col-xs-3 profile-dp-user-outer ltr no-p">
+		<div class="profile-dp-user ltr">
+			<img src="assets/imgs/user.png" class="img-profile">
+		</div>
+	</div>
+	<div class="col-xs-9 profile-name-user-outer ltr no-p">
+		<div class="profile-name-user ltr">
+		<h3 class="color-gray no-mb"><b>John Wick</b></h3>
+		<div class="rating-star-box ltr">
+      <rating [(ngModel)]="rate" 
+      readOnly="false"
+      max="5" 
+      emptyStarIconName="star-outline" 
+      halfStarIconName="star-half"
+      starIconName="star" 
+      nullable="false"> 
+      </rating>
+		</div>
+		</div>
+	</div>
+</div>
+<!-- container -->
+
+<!-- signup form -->
+<div class="bg-gray" style="padding-bottom: 30px;">
+	<div class="col-xs-12">
+		<div class="col-xs-12 form-inner">
+		    <form>
+		      <div class="form-group">
+		      	<div class="col-xs-12 bb label-box ltr">
+		      		<h4 class="title text-left"> 
+		      		<img src="assets/imgs/icon_user.png" class="icon-label">
+		      		John Wick</h4>
+		        </div>
+		      </div>
+		      <div class="form-group">
+		      	<div class="col-xs-12 bb label-box ltr">
+		        	<h4 class="title text-left"> 
+		      		<img src="assets/imgs/icon_world.png" class="icon-label">
+		      		UAE</h4>
+		        </div>
+		      </div>	      		
+		      <div class="form-group">
+		      	<div class="col-xs-12 label-box ltr">
+		        	<h4 class="title text-left"> 
+		      		<img src="assets/imgs/icon_world.png" class="icon-label">
+		      		Dubai</h4>
+		        </div>
+		      </div>	      		
+		     
+		    </form>
+	    </div>		
+    </div>
+
+    <!-- heading title bar -->
+    <div class="col-xs-12">
+    	<h4 class="heading-title short" style="font-size: 15px !important;">JOHN WICK'S LISTED CARS</h4>
+    </div>
+    <!-- heading title bar end -->
+
+    <!-- rental cars -->
+	<div class="col-xs-12">
+		<div class="home-box">
+			<div class="col-xs-3 no-p one-box ltr">
+				
+			</div>
+			<div class="col-xs-6 two-box ltr">
+				<img src="assets/imgs/car_lg.png" class="img-car">
+			</div>
+			<div class="col-xs-3 three-box ltr">
+				<br>
+				<div class="price-box">
+					<h5 class="c-white">AED<br>70</h5>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="col-xs-6 no-p name-box ltr">
+					<h4> <b>Hyundai Accent</b></h4>
+					<div class="rating-star-box ltr">
+            <rating [(ngModel)]="rate1" 
+            readOnly="false"
+            max="5" 
+            emptyStarIconName="star-outline" 
+            halfStarIconName="star-half"
+            starIconName="star" 
+            nullable="false"> 
+            </rating>
+					</div>
+					<div class="rating-star-title ltr">
+					<h5 class="no-m">15 Reviews  <img src="assets/imgs/arrow.png" class="img-arrow ltr"> </h5>
+					</div>
+				</div>
+				<div class="col-xs-6 no-p detail-box ltr">
+				<h5>868 Km Away</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12">
+		<div class="home-box">
+			<div class="col-xs-3 no-p one-box ltr">
+				
+			</div>
+			<div class="col-xs-6 two-box ltr">
+				<img src="assets/imgs/car_lg.png" class="img-car">
+			</div>
+			<div class="col-xs-3 three-box ltr">
+				<br>
+				<div class="price-box">
+					<h5 class="c-white">AED<br>70</h5>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="col-xs-6 no-p name-box ltr">
+					<h4> <b>Hyundai Accent</b></h4>
+					<div class="rating-star-box ltr">
+            <rating [(ngModel)]="rate2" 
+            readOnly="false"
+            max="5" 
+            emptyStarIconName="star-outline" 
+            halfStarIconName="star-half"
+            starIconName="star" 
+            nullable="false"> 
+            </rating>
+					</div>
+					<div class="rating-star-title ltr">
+					<h5 class="no-m">15 Reviews  <img src="assets/imgs/arrow.png" class="img-arrow ltr"> </h5>
+					</div>
+				</div>
+				<div class="col-xs-6 no-p detail-box ltr">
+				<h5>868 Km Away</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- rental cars -->
+
+</div>  
+<!-- signup form -->
+
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar>
+  <div class="col-xs-12 bottom-menu-box no-p">
+    <div class="menu-box" (click)="goToHome()">
+      <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+      <h6 class="menu-text">Home</h6>
+    </div>	
+    <div class="menu-box" (click)="goTomyBookings()">
+      <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+      <h6 class="menu-text">My Bookings</h6>
+    </div>	
+    <div class="menu-box" (click)="goToChat()">
+      <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+      <h6 class="menu-text">Chat</h6>
+    </div>	
+    <div class="menu-box" (click)="goToNotifications()">
+      <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+      <h6 class="menu-text">Notifications</h6>
+    </div>	
+    <div class="menu-box" (click)="goToListYourCar()">
+      <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+      <h6 class="menu-text">List your car</h6>
+    </div>	
+  </div>
+  </ion-toolbar>
+</ion-footer>

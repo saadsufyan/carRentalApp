@@ -1,0 +1,318 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle start>
+        <ion-icon name="menu" style="color: black"></ion-icon> 
+    </button>  
+    <ion-buttons class="person-icon-align">
+        <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-title>My Bookings</ion-title>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-segment [(ngModel)]="bookings" color="primary">
+		<ion-segment-button value="mybookings">
+			My Bookings
+		</ion-segment-button>
+		<ion-segment-button value="mycars">
+			My Cars
+		</ion-segment-button>
+	</ion-segment>
+
+
+	<div [ngSwitch]="bookings">
+		<ion-list *ngSwitchCase="'mybookings'">
+			
+			<div class="col-xs-12">
+				<ion-segment [(ngModel)]="mybooking" color="primary">
+					<ion-segment-button value="active_booking">
+						Active
+					</ion-segment-button>
+					<ion-segment-button value="previous_booking">
+						Previous
+					</ion-segment-button>
+				</ion-segment>
+			</div>
+
+			<div [ngSwitch]="mybooking">
+				<div *ngSwitchCase="'active_booking'">
+					<div class="col-xs-12">
+						<div class="home-box">
+							<div class="col-xs-3 no-p one-box ltr">
+								<div class="title-box" style="margin-top: 20px;">
+									<div class="vendor-dp-box">
+										<img src="assets/imgs/user.png">
+									</div>
+									<h5>John Wick</h5>
+								</div>
+							</div>
+							<div class="col-xs-6 two-box ltr">
+								<img src="assets/imgs/car_lg.png" class="img-car" (click)="goToCarDetails('book')">
+							</div>
+							<div class="col-xs-3 three-box ltr">
+								<br>
+								<div class="price-box">
+									<h5 class="c-white">AED<br>70</h5>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="col-xs-6 no-p name-box ltr" (click)="goToBookingDetails('active')">
+									<h4> <b>Hyundai Accent</b></h4>
+									<h6 class="no-m">20-Mar-2018 - 30-May-2018</h6>
+									<h5 class="no-m">+658784564</h5>
+								</div>
+								<div class="col-xs-6 no-p detail-box1 ltr">
+								<h5>868 Km Away</h5>
+								<button class="btn" style="border-radius: 80px;">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div *ngSwitchCase="'previous_booking'">
+
+					<div class="col-xs-12">
+						<div class="home-box">
+							<div class="col-xs-3 no-p one-box ltr">
+								<div class="title-box" style="margin-top: 20px;">
+									<div class="vendor-dp-box">
+										<img src="assets/imgs/user.png">
+									</div>
+									<h5>John Wick</h5>
+								</div>
+							</div>
+							<div class="col-xs-8 two-box ltr" style="margin-bottom: 6px;">
+								<img src="assets/imgs/car_lg.png" class="img-car" (click)="goToCarDetails('book')">
+							</div>					
+							<div class="col-xs-9" (click)="goToBookingDetails('previous')">
+								<div class="col-xs-12 no-p name-box ltr">
+									<h4> <b>Hyundai Accent</b></h4>
+									<h6 class="no-m">20-Mar-2018 - 30-May-2018</h6>
+								</div>
+							</div>
+							<div class="col-xs-3 three-box ltr">
+								<div class="price-box">
+									<h5 class="c-white">AED<br>70</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="home-box">
+							<div class="col-xs-3 no-p one-box ltr">
+								<div class="title-box" style="margin-top: 20px;">
+									<div class="vendor-dp-box">
+										<img src="assets/imgs/agency_logo.png">
+									</div>
+									<h5>Rental Cars</h5>
+								</div>
+							</div>
+							<div class="col-xs-8 two-box ltr" style="margin-bottom: 6px;">
+								<img src="assets/imgs/car_lg.png" class="img-car" (click)="goToCarDetails('book')">
+							</div>					
+							<div class="col-xs-9">
+								<div class="col-xs-12 no-p name-box ltr" (click)="goToBookingDetails('previous')">
+									<h4> <b>Hyundai Accent</b></h4>
+									<h6 class="no-m">20-Mar-2018 - 30-May-2018</h6>
+								</div>
+							</div>
+							<div class="col-xs-3 three-box ltr">
+								<div class="price-box">
+									<h5 class="c-white">AED<br>70</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="home-box">
+							<div class="col-xs-3 no-p one-box ltr">
+								<div class="title-box" style="margin-top: 20px;">
+									<div class="vendor-dp-box">
+										<img src="assets/imgs/user.png">
+									</div>
+									<h5>John Wick</h5>
+								</div>
+							</div>
+							<div class="col-xs-8 two-box ltr" style="margin-bottom: 6px;">
+								<img src="assets/imgs/car_lg.png" class="img-car" (click)="goToCarDetails('book')">
+							</div>					
+							<div class="col-xs-9">
+								<div class="col-xs-12 no-p name-box ltr" (click)="goToBookingDetails('previous')">
+									<h4> <b>Hyundai Accent</b></h4>
+									<h6 class="no-m">20-Mar-2018 - 30-May-2018</h6>
+								</div>
+							</div>
+							<div class="col-xs-3 three-box ltr">
+								<div class="price-box">
+									<h5 class="c-white">AED<br>70</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			
+		</ion-list>
+		
+		<ion-list *ngSwitchCase="'mycars'">
+			<div class="col-xs-12">
+				<ion-segment [(ngModel)]="mycar" color="primary">
+					<ion-segment-button value="active_cars">
+						Active
+					</ion-segment-button>
+					<ion-segment-button value="previous_cars">
+						Previous
+					</ion-segment-button>
+				</ion-segment>
+			</div>
+
+				<div [ngSwitch]="mycar">
+					<div *ngSwitchCase="'active_cars'">
+						<div class="col-xs-12">
+							<div class="home-box">
+								<div class="col-xs-3 no-p one-box ltr">
+									<div class="title-box" style="margin-top: 20px;">
+										<div class="vendor-dp-box">
+											<img src="assets/imgs/user.png">
+										</div>
+										<h5>Fischer</h5>
+									</div>
+								</div>
+								<div class="col-xs-6 two-box ltr" >
+									<img src="assets/imgs/car_lg.png" class="img-car" (click)="goToCarDetails('book')">
+								</div>
+								<div class="col-xs-3 three-box ltr">
+									<br>
+									<div class="price-box">
+										<h5 class="c-white">AED<br>70</h5>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="col-xs-6 no-p name-box ltr" (click)="goToMyCarBookingDetails()">
+										<h4> <b>Hyundai Sonata</b></h4>
+										<h6 class="no-m">20-Mar-2018 - 30-May-2018</h6>
+										<h5 class="no-m">+658784564</h5>
+									</div>
+									<div class="col-xs-6 no-p detail-box1 ltr" style="padding-top: 0;">
+									<h5>868 Km Away</h5>
+									<button class="btn" style="border-radius: 80px;background: #2c9541;color: #fff !important;padding: 5px 5px;">Complete</button>
+									<button class="btn" style="border-radius: 80px;">Cancel</button>
+									</div>
+								</div>
+							</div>
+						</div>		
+						<div class="col-xs-12">
+							<div class="home-box">
+								<div class="col-xs-3 no-p one-box ltr">
+									<div class="title-box" style="margin-top: 20px;">
+										<div class="vendor-dp-box">
+											<img src="assets/imgs/user.png">
+										</div>
+										<h5>Fischer</h5>
+									</div>
+								</div>
+								<div class="col-xs-6 two-box ltr">
+									<img src="assets/imgs/car_lg.png" class="img-car" (click)="goToCarDetails('book')">
+								</div>
+								<div class="col-xs-3 three-box ltr">
+									<br>
+									<div class="price-box">
+										<h5 class="c-white">AED<br>70</h5>
+									</div>
+								</div>
+								<div class="col-xs-12">
+									<div class="col-xs-6 no-p name-box ltr" (click)="goToMyCarBookingDetails()">
+										<h4> <b>BMW</b></h4>
+										<h6 class="no-m">20-Mar-2018 - 30-May-2018</h6>
+										<h5 class="no-m">+658784564</h5>
+									</div>
+									<div class="col-xs-6 no-p detail-box1 ltr">
+									<h5>868 Km Away</h5>
+									<button class="btn" style="border-radius: 80px;background: #3a6bc7;color: #fff !important; padding: 5px 5px;">Picked up</button>
+									<button class="btn" style="border-radius: 80px;">Cancel</button>
+									</div>
+								</div>
+							</div>
+						</div>				
+
+					</div>
+					
+					<div *ngSwitchCase="'previous_cars'">
+						<div class="col-xs-12">
+							<div class="home-box">
+								<div class="col-xs-3 no-p one-box ltr">
+									<div class="title-box" style="margin-top: 20px;">
+										<div class="vendor-dp-box">
+											<img src="assets/imgs/user.png">
+										</div>
+										<h5>John Wick</h5>
+									</div>
+								</div>
+								<div class="col-xs-8 two-box ltr" style="margin-bottom: 6px;">
+									<img src="assets/imgs/car_lg.png" class="img-car" (click)="goToCarDetails('book')">
+								</div>					
+								<div class="col-xs-9">
+									<div class="col-xs-12 no-p name-box ltr">
+										<h4> <b>Hyundai Accent</b></h4>
+										<h6 class="no-m">20-Mar-2018 - 30-May-2018</h6>
+									</div>
+								</div>
+								<div class="col-xs-3 three-box ltr">
+									<div class="price-box">
+										<h5 class="c-white">AED<br>70</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</ion-list>
+	</div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <div class="col-xs-12 bottom-menu-box no-p">
+    <div class="menu-box" (click)="goToHome()">
+      <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+      <h6 class="menu-text">Home</h6>
+    </div>	
+    <div class="menu-box active" (click)="goTomyBookings()">
+      <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+      <h6 class="menu-text">My Bookings</h6>
+    </div>	
+    <div class="menu-box" (click)="goToChat()">
+      <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+      <h6 class="menu-text">Chat</h6>
+    </div>	
+    <div class="menu-box" (click)="goToNotifications()">
+      <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+      <h6 class="menu-text">Notifications</h6>
+    </div>	
+    <div class="menu-box" (click)="goToListYourCar()">
+      <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+      <h6 class="menu-text">List your car</h6>
+    </div>	
+  </div>
+  </ion-toolbar>
+  
+ 
+</ion-footer>

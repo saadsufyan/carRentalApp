@@ -1,0 +1,28 @@
+page-bookingconfirmation {
+
+}
+.heading-strip {
+    background: #2b2b2b;
+    color: #fff !important;
+    padding: 14px 20px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.payment-list {
+    padding-left: 0px;
+}
+
+.calendar-box {
+    min-height: 270px !important;
+    display: table;
+}
+
+.payment-list li {
+    list-style: none;
+    padding: 16px 20px;
+}
+
+.payment-list li:nth-child(even) {
+    background: #e4e5e7;
+}

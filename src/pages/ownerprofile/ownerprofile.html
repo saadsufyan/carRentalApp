@@ -1,0 +1,133 @@
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle start>
+          <ion-icon name="menu" style="color: black"></ion-icon> 
+      </button>  
+      <ion-buttons class="person-icon-align">
+          <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-title>Owner Profile</ion-title>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right>
+          <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right>
+          <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+    </ion-navbar>
+  
+  </ion-header>
+
+<ion-content>
+<!-- container -->
+<div class="container profile-header">
+    <div class="col-xs-3 profile-dp-user-outer ltr no-p">
+      <div class="profile-dp-user">
+        <img src="assets/imgs/profile.png" class="img-profile">
+      </div>
+      <div class="rating-star-box ltr">
+          <rating [(ngModel)]="rate1" 
+          readOnly="false"
+          max="5" 
+          emptyStarIconName="star-outline" 
+          halfStarIconName="star-half"
+          starIconName="star" 
+          nullable="false"> 
+          </rating>
+      </div>
+    </div>
+    <div class="col-xs-9 profile-name-user-outer ltr no-p">
+      <div class="profile-name-user">
+      <h3 class="color-gray no-m"><b>Al Maraya</b> <img src="assets/imgs/edit.png" class="pull-right ltr"> </h3>
+      <h5>
+      We are UAE's top rated car hire service with a proven track record of serving both tourists and local travelers for more than a decade. Our team includes trained vehicle experts and customer care representatives who walk you through the vehicle rental process
+      </h5>
+    </div>
+    </div>
+  </div>
+  <!-- container -->
+  
+  <!-- signup form -->
+  <div class="bg-gray">
+    <div class="col-xs-12" style="padding-bottom: 30px;">
+      <div class="col-xs-12 form-inner">
+          <form>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="text-box form-control text-icon-align icon-name ltr" placeholder="Name" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="text-box form-control text-icon-align icon-email ltr" placeholder="Email Address" required="">
+              </div>
+            </div>	      		
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="text-box form-control text-icon-align icon-phone ltr" placeholder="Mobile Number" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="password" class="text-box form-control text-icon-align icon-password ltr" placeholder="Password" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="text-box form-control text-icon-align icon-country ltr" placeholder="Country" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="text-box form-control text-icon-align icon-country ltr" placeholder="City" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="text-box form-control text-icon-align icon-address ltr" (click)="launchLocationPage()" placeholder="{{locationname}}" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12" style="text-align: center; padding-top: 30px;">
+                <button class="btn btn-filled lg">Save</button>		          	
+              </div>
+              </div>
+          </form>
+        </div>		
+      </div>
+  </div>  
+  <!-- signup form -->
+</ion-content>
+
+
+<ion-footer>
+    <ion-toolbar>
+    <div class="col-xs-12 bottom-menu-box no-p">
+      <div class="menu-box" (click)="goToHome()">
+        <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+        <h6 class="menu-text">Home</h6>
+      </div>	
+      <div class="menu-box" (click)="goTomyBookings()">
+        <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+        <h6 class="menu-text">My Bookings</h6>
+      </div>	
+      <div class="menu-box" (click)="goToChat()">
+        <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+        <h6 class="menu-text">Chat</h6>
+      </div>	
+      <div class="menu-box" (click)="goToNotifications()">
+        <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+        <h6 class="menu-text">Notifications</h6>
+      </div>	
+      <div class="menu-box" (click)="goToListYourCar()">
+        <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+        <h6 class="menu-text">List your car</h6>
+      </div>	
+    </div>
+    </ion-toolbar>
+    
+   
+  </ion-footer>

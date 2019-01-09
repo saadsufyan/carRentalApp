@@ -1,0 +1,104 @@
+page-login {
+
+}
+.caption {
+    position: absolute;
+    top: auto;
+    width: 90%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: left;
+    bottom: 6%;
+    z-index: 8888;
+}
+
+.img-logo {
+    width: 150px !important;
+}
+
+.c-white {
+    color: #fff !important;
+}
+
+.img-splash {
+    width: 100%;
+}
+
+// .swiper-pagination-bullet-active {
+//     background: #f4f4f4;
+//     opacity: 1;
+// }
+
+.signup-header {
+    // padding: 6% 0 10px 0;
+    padding:  15% 0 10px 0;
+    text-align: center;
+}
+// .no-pl {
+//     padding-left: 0 !important;
+// }
+
+.icon-email {
+    background-image: url(../assets/imgs/icon_message.png) !important;
+    background-position: 12px 12px !important;
+}
+.icon-password {
+    background-image: url(../assets/imgs/icon_password.png) !important;
+    background-position: 12px 12px !important;
+}
+
+.text-box {
+    color: #4f6366 !important;
+    border: solid 1px #282828 !important;
+    box-shadow: none !important;
+    border-radius: 3px !important;
+    margin: 0 0 12px 0 !important;
+    // background: none !important;
+    font-size: 16px !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400 !important;
+    padding: 0px 4px 0 20px;
+    // padding: 0px 4px 0 40px !important;
+    background-size: 18px !important;
+    height: 40px !important;
+    background-repeat: no-repeat !important;
+    width: 100%;
+}
+
+.text-icon-align {
+    padding: 0px 4px 0 40px !important;
+}
+.btn.lg {
+    padding: 4% 28% !important;
+    min-width: 230px;
+}
+
+.btn-filled {
+    font-size: 16px !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 4% 28% !important;
+    min-width: 220px;
+    border-radius: 200px !important;
+    background: #3865ba;
+}
+
+.img-social {
+    // 270
+    width: 230px !important;
+}
+
+.c-lightblue {
+    color: #4c7dd8 !important;
+}
+
+.bg {
+    background: url(../assets/imgs/bg.png);
+    background-size: cover;
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+    outline: none !important;
+    outline-offset: -2px;
+}

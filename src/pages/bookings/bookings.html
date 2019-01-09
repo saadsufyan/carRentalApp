@@ -1,0 +1,119 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle start>
+        <ion-icon name="menu" style="color: black"></ion-icon> 
+    </button>  
+    <ion-buttons class="person-icon-align">
+        <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-title>Bookings</ion-title>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  
+
+
+<!-- container -->
+<div class="container profile-header" style="padding: 0 !important;min-height: 80px;">
+	
+</div>
+<!-- container -->
+
+<!-- signup form -->
+<div class="bg-gray" style="padding-bottom: 30px;">
+	<div class="col-xs-12">
+		<div class="col-xs-12 form-inner">
+			
+			<div class="col-xs-12 text-center">
+				<br>
+				<h3 class="c-darkblue no-m">Hi David</h3>
+				<h4 class="heading-light">Thank You for choosing CarsBnB</h4>
+				<hr>
+			</div>
+			<div class="col-xs-12 no-p">
+				<div class="col-xs-2 no-p one-box ltr" style="margin-top: 20px;">
+					<div class="title-box">
+						<div class="vendor-dp-box">
+							<img src="assets/imgs/car.png">
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-7 two-box ltr">
+					<h4> <b>Hyundai Accent</b></h4>
+					<h5><span class="c-darkblue"> <b> Make: </b></span> Hyundai </h5>
+					<h5><span class="c-darkblue"> <b> Model: </b></span> Accent </h5>
+					<h5><span class="c-darkblue"> <b> Year: </b></span> 2015 </h5>
+				</div>
+				<div class="col-xs-3 three-box ltr">
+					<br>
+					<div class="price-box">
+						<h5 class="c-white">AED<br>70</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 calendar-box text-center no-p">
+					<!-- <ng-datepicker [(ngModel)]="date" isOpened="true"> </ng-datepicker> -->
+
+					<ion-calendar [(ngModel)]="dateRange"
+              [options]="optionsMulti"
+              [type]="type"
+              [format]="'YYYY-MM-DD'">
+					</ion-calendar>
+			</div>
+
+
+			<div class="col-xs-12">
+        <textarea class="text-box lg" placeholder="Remarks"></textarea>
+				<!-- <input class="text-box new" type="text" name="" placeholder="Remarks"> -->
+			</div>
+			<div class="col-xs-12" style="text-align: center; padding-top: 30px;">
+	        	<button class="btn btn-filled lg" (click)="goToBookingConfirmation()">Proceed</button> 
+	        </div>
+
+	    </div>		
+    </div>
+</div>  
+<!-- signup form -->
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+  <div class="col-xs-12 bottom-menu-box no-p">
+    <div class="menu-box active" (click)="goToHome()">
+      <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+      <h6 class="menu-text">Home</h6>
+    </div>	
+    <div class="menu-box" (click)="goTomyBookings()">
+      <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+      <h6 class="menu-text">My Bookings</h6>
+    </div>	
+    <div class="menu-box" (click)="goToChat()">
+      <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+      <h6 class="menu-text">Chat</h6>
+    </div>	
+    <div class="menu-box" (click)="goToNotifications()">
+      <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+      <h6 class="menu-text">Notifications</h6>
+    </div>	
+    <div class="menu-box" (click)="goToListYourCar()">
+      <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+      <h6 class="menu-text">List your car</h6>
+    </div>	
+  </div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,126 @@
+<ion-header>
+
+    <ion-navbar>
+      <button ion-button menuToggle start>
+          <ion-icon name="menu" style="color: black"></ion-icon> 
+      </button>  
+      <ion-buttons class="person-icon-align">
+          <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-title>My Profile</ion-title>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right> 
+          <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+      <ion-buttons right>
+          <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+      </ion-buttons> 
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content padding>
+<!-- container -->
+<div class="container profile-header">
+	<div class="col-xs-3 profile-dp-user-outer ltr no-p">
+		<div class="profile-dp-user">
+			<img src="assets/imgs/profile.png" class="img-profile">
+		</div>
+	</div>
+	<div class="col-xs-9 profile-name-user-outer ltr no-p">
+		<div class="profile-name-user">
+		<h3 class="color-gray"><b>David Johnson</b></h3>
+		<button class="btn btn-filled sm pull-right ltr" style="width: 100px;padding: 6px !important;">Edit</button>
+	</div>
+	</div>
+</div>
+<!-- container -->
+
+<!-- signup form -->
+<div class="bg-gray">
+	<div class="col-xs-12" style="padding-bottom: 30px;">
+		<div class="col-xs-12 form-inner">
+		    <form>
+		      <div class="form-group">
+		      	<div class="col-xs-12">
+		        	<input type="text" class="text-box form-control icon-name text-icon-align ltr" placeholder="Name" required="">
+		        </div>
+		      </div>
+		      <div class="form-group">
+		      	<div class="col-xs-12">
+		        	<input type="text" class="text-box form-control icon-email text-icon-align ltr" placeholder="Email Address" required="">
+		        </div>
+		      </div>	      		
+		      <div class="form-group">
+		      	<div class="col-xs-12">
+		        	<input type="text" class="text-box form-control icon-phone text-icon-align ltr" placeholder="Mobile Number" required="">
+		        </div>
+		      </div>
+		      <div class="form-group">
+		      	<div class="col-xs-12">
+		        	<input type="password" class="text-box form-control icon-password text-icon-align ltr" placeholder="Password" required="">
+		        </div>
+		      </div>
+		      <div class="form-group">
+		      	<div class="col-xs-12">
+							<input type="text" class="text-box form-control icon-country text-icon-align ltr" placeholder="Country" required="">
+		        </div>
+		      </div>
+		      <div class="form-group">
+		      	<div class="col-xs-12">		
+							<input type="text" class="text-box form-control icon-country text-icon-align ltr" placeholder="City" required="">
+		        </div>
+		      </div>
+		      <div class="form-group">
+		      	<div class="col-xs-12">
+		        	<input type="text" class="text-box form-control icon-address text-icon-align ltr" (click)="launchLocationPage('show')" placeholder="{{locationname}}" required="">
+		        </div>
+		      </div>
+		      <div class="form-group">
+		      	<div class="col-xs-12" style="text-align: center; padding-top: 30px;">
+		        	<button class="btn btn-filled lg">Save</button>		          	
+		        </div>
+	          </div>
+		    </form>
+	    </div>
+			<div class="form-group">
+	      	<div class="col-xs-12" style="text-align: center; padding-top: 30px;">
+	        	<button class="btn btn-dark lg" (click)="goToListYourCar()">List your car</button>		          	
+	        </div>
+        </div>
+    </div>
+</div>  
+<!-- signup form -->
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+    <div class="col-xs-12 bottom-menu-box no-p">
+      <div class="menu-box" (click)="goToHome()">
+        <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+        <h6 class="menu-text">Home</h6>
+      </div>	
+      <div class="menu-box" (click)="goTomyBookings()">
+        <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+        <h6 class="menu-text">My Bookings</h6>
+      </div>	
+      <div class="menu-box" (click)="goToChat()">
+        <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+        <h6 class="menu-text">Chat</h6>
+      </div>	
+      <div class="menu-box" (click)="goToNotifications()">
+        <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+        <h6 class="menu-text">Notifications</h6>
+      </div>	
+      <div class="menu-box" (click)="goToListYourCar()">
+        <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+        <h6 class="menu-text">List your car</h6>
+      </div>	
+    </div>
+    </ion-toolbar>
+    
+   
+  </ion-footer>

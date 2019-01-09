@@ -1,0 +1,114 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle start>
+        <ion-icon name="menu" style="color: black"></ion-icon> 
+    </button>  
+    <ion-buttons class="person-icon-align">
+        <button ion-button icon-only (click)="goToMyprofile()"><ion-icon class= "" name="person" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-title>Chat</ion-title>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="launchLocationPage()"><ion-icon class= "" name="ios-pin-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="onClickSearchIcon('searchBar')"><ion-icon class= "" name="search" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+    <ion-buttons right>
+        <button ion-button icon-only (click)="goToSearch()"><ion-icon class= "" name="ios-funnel-outline" style="color: black"></ion-icon></button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="col-xs-12 box-outer">
+  
+    <div class="notification-box ltr" (click)="goToConversations()">
+      <div class="col-xs-12 no-p">
+        <div class="col-xs-2 notification-left ltr no-pl">
+          <div class="notification-dp ltr">
+              <img src="assets/imgs/user.png" class="img-booking">
+          </div>
+        </div>
+        <div class="col-xs-7 notification-right ltr no-pr" style="padding-top: 10px;">
+          <h4 class="color-gray no-m">John Wick</h4>
+          <h5 class="color-gray no-m">Lorem ipsum dummy text.</h5>
+        </div>
+        <div class="col-xs-3 notification-right text-center ltr">
+          <span class="chat-number">03</span>
+          <img src="assets/imgs/icon_chat_active.png" class="icon-chat">
+          <h5>Sat</h5>
+        </div>
+  
+      </div>
+    </div>  
+    <div class="notification-box ltr" (click)="goToConversations()">
+      <div class="col-xs-12 no-p">
+        <div class="col-xs-2 notification-left ltr no-pl">
+          <div class="notification-dp ltr">
+              <img src="assets/imgs/agency_logo.png" class="img-booking">
+          </div>
+        </div>
+        <div class="col-xs-7 notification-right ltr no-pr" style="padding-top: 10px;">
+          <h4 class="color-gray no-m">Rental Cars</h4>
+          <h5 class="color-gray no-m">Lorem ipsum dummy text.</h5>
+        </div>
+        <div class="col-xs-3 notification-right text-center ltr">
+          <span class="chat-number">05</span>
+          <img src="assets/imgs/icon_chat_active.png" class="icon-chat">
+          <h5>Sat</h5>
+        </div>
+  
+      </div>
+    </div>
+    <div class="notification-box ltr" (click)="goToConversations()">
+      <div class="col-xs-12 no-p">
+        <div class="col-xs-2 notification-left ltr no-pl">
+          <div class="notification-dp ltr">
+              <img src="assets/imgs/user.png" class="img-booking">
+          </div>
+        </div>
+        <div class="col-xs-7 notification-right ltr no-pr" style="padding-top: 10px;">
+          <h4 class="color-gray no-m">John Wick</h4>
+          <h5 class="color-gray no-m">Lorem ipsum dummy text.</h5>
+        </div>
+        <div class="col-xs-3 notification-right text-center ltr">
+          <img src="assets/imgs/icon_chat.png" class="icon-chat">
+          <h5>Sat</h5>
+        </div>
+  
+      </div>
+    </div>
+    
+  </div>
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="col-xs-12 bottom-menu-box no-p">
+      <div class="menu-box" (click)="goToHome()">
+        <img src="assets/imgs/menu_home.png" class="img-menu-icon">
+        <h6 class="menu-text">Home</h6>
+      </div>	
+      <div class="menu-box" (click)="goTomyBookings()">
+        <img src="assets/imgs/menu_car.png" class="img-menu-icon">
+        <h6 class="menu-text">My Bookings</h6>
+      </div>	
+      <div class="menu-box active" (click)="goToChat()">
+        <img src="assets/imgs/menu_chat.png" class="img-menu-icon">
+        <h6 class="menu-text">Chat</h6>
+      </div>	
+      <div class="menu-box" (click)="goToNotifications()">
+        <img src="assets/imgs/menu_notification.png" class="img-menu-icon">
+        <h6 class="menu-text">Notifications</h6>
+      </div>	
+      <div class="menu-box" (click)="goToListYourCar()">
+        <img src="assets/imgs/menu_car2.png" class="img-menu-icon">
+        <h6 class="menu-text">List your car</h6>
+      </div>	
+    </div>
+  </ion-toolbar>
+</ion-footer>
