@@ -24,37 +24,47 @@
 
 <!-- signup form -->
 <div class="form-box">
-	<div class="col-xs-12">
-	<div class="col-xs-12">
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 	    <form>
 	      <div class="form-group">
-	      	<div class="col-xs-12 no-pl">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 	        	<input type="text" class="text-box form-control icon-name text-icon-align ltr" placeholder="Name" required="" name="name" [(ngModel)]="name">
 	        </div>
 	      </div>
 	      <div class="form-group">
-	      	<div class="col-xs-12 no-pl">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 	        	<input type="text" class="text-box form-control icon-email text-icon-align ltr" placeholder="Email Address" required="" name="email" [(ngModel)]="email">
 	        </div>
 	      </div>	      
 	      <div class="form-group">
-	      	<div class="col-xs-12 no-pl">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 	        	<input type="password" class="text-box form-control icon-password text-icon-align ltr" placeholder="Password" required="" name="password" [(ngModel)]="password">
 	        </div>
 	      </div>
 	      <div class="form-group">
-	      	<div class="col-xs-12 no-pl">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 	        	<input type="password" class="text-box form-control icon-password text-icon-align ltr" placeholder="Retype Password" required="" name="retypepassword" [(ngModel)]="retypepassword">
 	        </div>
 	      </div>		
 	      <div class="form-group">
-	      	<div class="col-xs-12 no-pl">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 	        	<input type="text" class="text-box form-control icon-phone text-icon-align ltr" placeholder="Mobile Number" required="" name="mobilenumber" [(ngModel)]="mobilenumber">
+	        </div>
+				</div>
+				<div class="form-group">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+	        	<input type="text" class="text-box form-control icon-phone text-icon-align ltr" placeholder="NIC" required="" name="nic" [(ngModel)]="nic">
+	        </div>
+				</div>
+				<div class="form-group">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+	        	<input type="text" class="text-box form-control icon-phone text-icon-align ltr" placeholder="license" required="" name="license" [(ngModel)]="license">
 	        </div>
 				</div>
 				
 	      <div class="form-group">
-						<div class="col-xs-12 no-pl">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 							<select class="text-box icon-country text-icon-align ltr" name="countryname" [(ngModel)]="country">
 								<option ngValue="country">Country</option>
 								<option ngValue="uae">UAE</option>
@@ -62,7 +72,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-xs-12 no-pl">
+						<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 							<select class="text-box icon-country text-icon-align ltr"  name="cityname" [(ngModel)]="city">
 								<option ngValue="city">City</option>
 								<option ngValue="dubai">Dubai</option>
@@ -70,24 +80,24 @@
 						</div>
 				</div>
 	      <!-- <div class="form-group">
-	      	<div class="col-xs-12 no-pl">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 						<input type="text" class="text-box form-control icon-country text-icon-align ltr" placeholder="Country" required="" name="country" [(ngModel)]="country">
 	        </div>
 	      </div>
 	      <div class="form-group">
-	      	<div class="col-xs-12 no-pl">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 						<input type="text" class="text-box form-control icon-country text-icon-align ltr" placeholder="City" required="" name="city" [(ngModel)]="city">
 	        </div>
 	      </div> -->
 	      <div class="form-group">
-	      	<div class="col-xs-12 no-pl">
+	      	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 						<input type="text" class="text-box form-control icon-address text-icon-align ltr" 
 						(click)="launchLocationPage('show')" placeholder="{{locationname}}" required="" name="address" [(ngModel)]="locationname">
 	        </div>
 	      </div>
 	      <div class="form-group">
-	          <div class="col-xs-12" style="text-align: center; padding-top: 30px;">
-	          	<button class="btn btn-filled lg" (click)="signupUser(name,email,password,retypepassword,mobilenumber,country,city)">Register</button>		          	
+	          <div class="col-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; padding-top: 30px;">
+	          	<button class="btn-filled lg" (click)="signupUser(name,email,password,retypepassword,mobilenumber,country,city, nic, license)">Register</button>		          	
 	          	<br><br>
 	          	<h4 class="color-gray">Already have account?
 	          	<br>

@@ -21,12 +21,12 @@ import { HomePage } from '../home/home';
   providers: [LoginService , AlertView, NetworkService]
 })
 export class SignupPage {
-  public errorMessage : any
-  public lat : any
-  public long : any
-  public locationname : any = "Address"
-  public country = "country"
-  public city = "city"
+  public errorMessage ;
+  public lat;
+  public long;
+  public locationname : any = "Address";
+  public country = "country";
+  public city = "city";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl : ViewController, public loginservice : LoginService, public popup : AlertView, public modalCtrl: ModalController, public menu : MenuController) {
   }
@@ -41,7 +41,7 @@ export class SignupPage {
   goToLogin(){
     this.navCtrl.push(LoginPage, {animation: 'left'})
   }
-  signupUser(name,email,password,retypepassword,mobilenumber, country, city){
+  signupUser(name,email,password,retypepassword,mobilenumber, country, city, nic, license){
 
     if(name != null && email != null && password !=null && retypepassword !=null && mobilenumber != null){
 
@@ -53,10 +53,13 @@ export class SignupPage {
           "email": email,
           "password": password,
           "phone" : mobilenumber,
+          "address" : this.locationname,
           "country" : country,
           "city" : city,
           "lat" : this.lat,
-          "long" : this.long
+          "long" : this.long,
+          "nic_number": nic,
+          "licence_number": license
         }
   
         console.log(data)

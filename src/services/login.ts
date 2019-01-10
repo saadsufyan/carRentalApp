@@ -6,7 +6,7 @@ import { NetworkService } from './network'
 @Injectable()
 @Component({})
 export class LoginService{
-    private basicUrl = "http://34.214.14.69/carbnb-backend/public/index.php/api/user"
+    private basicUrl = "http://52.14.99.136/Carbnb/public/index.php/api/user"
     constructor (public network : NetworkService) {}
  
     onUserLogin(data) : Observable<any> {

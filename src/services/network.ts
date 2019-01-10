@@ -11,8 +11,8 @@ import 'rxjs/add/operator/catch';
 
 export class NetworkService{
     
-    public ios_Client_key : string = 'SU9TIENsaWVudElEOiBTVTlUSUVOc2FXVnVkRWxFT2lCallYSmlibUl0WVhCd0xXbHZjdz09';
-    public android_client_key : string = 'QW5kcm9pZCBDbGllbnRJRDogUVc1a2NtOXBaQ0JEYkdsbGJuUkpSRG9nWTJGeVltNWlMV0Z3Y0MxaGJtUnliMmxr';
+    public ios_Client_key : string = 'c3ltby1hcHAtaW9zOmE4ODI4NjY1LTU1MzgtNGNlYy1hYzU4LWE0YmU0NmE1Y2Y3OA==';
+    public android_client_key : string = 'c3ltby1hcHAtYW5kcm9pZDphODgyODY2NS01NTM4LTRjZWMtYWM1OC1hNGJlNDZhNWNmNzg=';
     public device : any
     public authorizationkey : any
 
